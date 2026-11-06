@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spreadsheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Spreadsheet</h1>
+    <div class="actions">
+      <button id="demo" type="button">Load demo</button>
+      <button id="export" type="button">Export CSV</button>
+      <button id="clear" type="button" class="ghost">Clear</button>
+    </div>
+  </header>
+  <div class="bar">
+    <button id="name-box" type="button" class="name" title="Go to cell">A1</button>
+    <span class="fx" aria-hidden="true">fx</span>
+    <input id="formula" aria-label="Formula bar" placeholder="Type a value or a formula such as =SUM(A1:A5)" autocomplete="off" spellcheck="false">
+  </div>
+  <p id="info" class="info" aria-live="polite"></p>
+  <main id="grid" class="grid" aria-label="Spreadsheet grid"></main>
+  <p class="hint">Arrows move, type to edit, Enter commits, Tab moves right, Esc cancels, F2 edits, Delete clears. Functions: SUM, AVERAGE, MIN, MAX, COUNT, IF, ROUND, ABS, SQRT, AND, OR, NOT, CONCAT.</p>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
